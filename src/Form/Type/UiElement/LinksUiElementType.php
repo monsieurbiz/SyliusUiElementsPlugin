@@ -1,16 +1,22 @@
 <?php
+
+/*
+ * This file is part of Monsieur Biz's SyliusUiElementsPlugin for Sylius.
+ * (c) Monsieur Biz <sylius@monsieurbiz.com>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 declare(strict_types=1);
 
-namespace App\Form\Type\UiElement;
+namespace MonsieurBiz\SyliusUiElementsPlugin\Form\Type\UiElement;
 
-use App\Form\LinkType;
-use App\Form\TitleWithDot;
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\AsUiElement;
+use MonsieurBiz\SyliusUiElementsPlugin\Form\Type\LinkType;
+use MonsieurBiz\SyliusUiElementsPlugin\Form\Type\TitleWithDot;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -22,22 +28,28 @@ use Symfony\Component\Validator\Constraints as Assert;
 class LinksUiElementType extends AbstractType
 {
     public const BACKGROUND_LIGHT = 'light';
+
     public const BACKGROUND_DARK = 'dark';
+
     public const ALIGNMENT_FULL_WIDTH = 'full_width';
+
     public const ALIGNMENT_RIGHT = 'right';
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('title', TitleWithDot::class, [
-                'label' => 'app.ui_element.links_ui_element.fields.title',
+                'label' => 'monsieurbiz_ui_elements.common.fields.title',
                 'required' => false,
                 'attr' => [
                     'class' => 'ui segment',
                 ],
             ])
             ->add('background', ChoiceType::class, [
-                'label' => 'app.ui_element.links_ui_element.fields.background.label',
+                'label' => 'monsieurbiz_ui_elements.common.fields.background',
                 'choices' => [
                     'app.ui_element.links_ui_element.fields.background.choices.light' => self::BACKGROUND_LIGHT,
                     'app.ui_element.links_ui_element.fields.background.choices.dark' => self::BACKGROUND_DARK,
@@ -48,7 +60,7 @@ class LinksUiElementType extends AbstractType
                 ],
             ])
             ->add('alignment', ChoiceType::class, [
-                'label' => 'app.ui_element.links_ui_element.fields.alignment.label',
+                'label' => 'monsieurbiz_ui_elements.common.fields.alignment',
                 'choices' => [
                     'app.ui_element.links_ui_element.fields.alignment.choices.full_width' => self::ALIGNMENT_FULL_WIDTH,
                     'app.ui_element.links_ui_element.fields.alignment.choices.right' => self::ALIGNMENT_RIGHT,
@@ -60,7 +72,7 @@ class LinksUiElementType extends AbstractType
                 ],
             ])
             ->add('links', CollectionType::class, [
-                'label' => 'app.ui_element.links_ui_element.fields.links',
+                'label' => 'monsieurbiz_ui_elements.common.fields.links',
                 'entry_type' => LinkType::class,
                 'allow_add' => true,
                 'allow_delete' => true,

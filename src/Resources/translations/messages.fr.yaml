@@ -4,7 +4,29 @@ monsieurbiz_ui_elements:
             title: "Titre"
             subtitle: "Sous-titre"
             description: "Description"
+            background: "Couleur de fond"
+            alignment: "Alignement"
+            links: "Liens"
+            link: "Lien"
+            label: "Libellé"
+            type: "Type"
+            withDot: "Avec point ?"
     hero_ui_element:
         title: "Hero"
         description: "Zone immersive avec titre et description"
-
+    links_ui_element:
+        title: "Liens"
+        description: "Ensemble de liens"
+        fields:
+            background:
+                choices:
+                    light: "Clair"
+                    dark: "Foncé"
+            alignment:
+                choices:
+                    full_width: "Pleine largeur"
+                    right: "À droite"
+            type:
+                choices:
+                    internal: "Interne"
+                    external: "Externe"
