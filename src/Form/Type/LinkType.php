@@ -16,6 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class LinkType extends AbstractType
 {
@@ -32,6 +33,16 @@ class LinkType extends AbstractType
             ->add('link', UrlType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.link',
                 'required' => true,
+                'constraints' => [
+                    new Assert\AtLeastOneOf([
+                        'includeInternalMessages' => false,
+                        'message' => 'monsieurbiz_ui_elements.errors.not_valid_url',
+                        'constraints' => [
+                            new Assert\Url(['protocols' => ['http', 'https'], 'relativeProtocol' => true]),
+                            new Assert\Regex(['pattern' => '`^(#|/[^/])`']),
+                        ],
+                    ]),
+                ],
             ])
             ->add('label', TextType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.label',

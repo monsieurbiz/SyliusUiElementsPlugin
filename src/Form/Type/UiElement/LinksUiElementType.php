@@ -12,8 +12,8 @@ declare(strict_types=1);
 namespace MonsieurBiz\SyliusUiElementsPlugin\Form\Type\UiElement;
 
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\AsUiElement;
+use MonsieurBiz\SyliusRichEditorPlugin\Form\Type\UiElement\TitleType;
 use MonsieurBiz\SyliusUiElementsPlugin\Form\Type\LinkType;
-use MonsieurBiz\SyliusUiElementsPlugin\Form\Type\TitleWithDot;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
@@ -41,7 +41,7 @@ class LinksUiElementType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title', TitleWithDot::class, [
+            ->add('title', TitleType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.title',
                 'required' => false,
                 'attr' => [
