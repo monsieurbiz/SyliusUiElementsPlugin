@@ -1,0 +1,15 @@
+{#
+UI Element template
+type: hero_ui_element
+element fields:
+    - title
+    - subtitle
+    - description
+#}
+
+{# Temporary style #}
+<div style="padding: 20px; background-color: #07353d; color: #ffefea;">
+    <strong>{{ element.title|raw }}</strong>
+    <strong style="color: #79898c;">{{ element.subtitle }}</strong>
+    <p style="color: #bcc9cb;">{{ element.description }}</p>
+</div>

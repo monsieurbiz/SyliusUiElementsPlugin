@@ -1,0 +1,10 @@
+monsieurbiz_ui_elements:
+    common:
+        fields:
+            title: "Titre"
+            subtitle: "Sous-titre"
+            description: "Description"
+    hero_ui_element:
+        title: "Hero"
+        description: "Zone immersive avec titre et description"
+

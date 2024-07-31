@@ -1,17 +1,15 @@
 <?php
 
 /*
- * This file is part of a proprietary project.
- *
+ * This file is part of Monsieur Biz's SyliusUiElementsPlugin for Sylius.
  * (c) Monsieur Biz <sylius@monsieurbiz.com>
- *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
 declare(strict_types=1);
 
-namespace App\Form\Type\UiElement;
+namespace MonsieurBiz\SyliusUiElementsPlugin\Form\Type\UiElement;
 
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\AsUiElement;
 use MonsieurBiz\SyliusRichEditorPlugin\Form\Type\WysiwygType;
@@ -33,7 +31,7 @@ class HeroUiElementType extends AbstractType
     {
         $builder
             ->add('title', WysiwygType::class, [
-                'label' => 'app.ui_element.hero_ui_element.fields.title',
+                'label' => 'monsieurbiz_ui_elements.common.fields.title',
                 'required' => false,
                 'editor_height' => 120,
                 'editor_toolbar_type' => EditorInterface::TOOLBAR_TYPE_CUSTOM,
@@ -47,11 +45,11 @@ class HeroUiElementType extends AbstractType
                 ],
             ])
             ->add('subtitle', null, [
-                'label' => 'app.ui_element.hero_ui_element.fields.subtitle',
+                'label' => 'monsieurbiz_ui_elements.common.fields.subtitle',
                 'required' => false,
             ])
             ->add('description', null, [
-                'label' => 'app.ui_element.hero_ui_element.fields.description',
+                'label' => 'monsieurbiz_ui_elements.common.fields.description',
                 'required' => false,
             ])
         ;

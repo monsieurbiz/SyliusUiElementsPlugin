@@ -1,0 +1,22 @@
+{#
+UI Element template
+type: hero_ui_element
+element fields:
+    - title
+    - subtitle
+    - description
+#}
+
+{# Temporary style #}
+<div style="padding: 20px; background-color: #07353d; color: #ffefea;">
+    {% if element.title is defined and element.title is not null %}
+        <strong>{{ element.title|raw }}</strong>
+    {% endif %}
+    {% if element.subtitle is defined and element.subtitle is not null %}
+        <strong style="color: #79898c;">{{ element.subtitle }}</strong>
+    {% endif %}
+    {% if element.description is defined and element.description is not null %}
+        <p style="color: #bcc9cb;">{{ element.description }}</p>
+    {% endif %}
+</div>
+
