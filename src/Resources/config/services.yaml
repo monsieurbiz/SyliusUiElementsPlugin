@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    MonsieurBiz\SyliusUiElementsPlugin\:
+        resource: '../../*'
+        exclude: '../../{Entity}'
+
+    MonsieurBiz\SyliusUiElementsPlugin\Controller\:
+        resource: '../../Controller'
+        tags: [ 'controller.service_arguments' ]
+
