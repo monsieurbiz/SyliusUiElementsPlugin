@@ -1,0 +1,21 @@
+{#
+UI Element template
+type: links_ui_element
+element fields:
+    - title
+    - background
+    - alignment
+    - links
+        - link
+        - label
+        - type
+#}
+
+<div class="ui grid {{ element.background == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\UiElement\\LinksUiElementType::BACKGROUND_DARK') ? 'inverted' }}">
+    {% if element.title.content|default('') is not empty %}
+        <span class="ui huge header">{{ element.title.content|raw }}</span>
+    {% endif %}
+{#    {% for linkItem in element.links %}#}
+
+{#    {% endfor %}#}
+</div>

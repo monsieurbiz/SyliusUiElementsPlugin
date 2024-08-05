@@ -1,0 +1,35 @@
+monsieurbiz_ui_elements:
+    common:
+        fields:
+            title: "Titre"
+            subtitle: "Sous-titre"
+            description: "Description"
+            background: "Couleur de fond"
+            alignment: "Alignement"
+            links: "Liens"
+            link: "Lien"
+            label: "Libellé"
+            type: "Type"
+            withDot: "Avec point ?"
+    errors:
+        not_valid_url: "Cette valeur n'est pas une URL valide (absolue ou relative) ou un hashtag valide."
+    ui_element:
+        hero_ui_element:
+            title: "Hero"
+            description: "Zone immersive avec titre et description"
+        links_ui_element:
+            title: "Liens"
+            description: "Ensemble de liens"
+            fields:
+                background:
+                    choices:
+                        light: "Clair"
+                        dark: "Foncé"
+                alignment:
+                    choices:
+                        full_width: "Pleine largeur"
+                        right: "À droite"
+                type:
+                    choices:
+                        internal: "Interne"
+                        external: "Externe"

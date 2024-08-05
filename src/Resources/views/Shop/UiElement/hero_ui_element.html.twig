@@ -1,0 +1,23 @@
+{#
+UI Element template
+type: hero_ui_element
+element fields:
+    - title
+    - subtitle
+    - description
+#}
+
+<div>
+    <p>
+        {% if element.title|default('') is not empty %}
+            <span class="ui huge header">{{ element.title|raw }}</span>
+        {% endif %}
+        {% if element.subtitle|default('') is not empty %}
+            <span class="ui medium header">{{ element.subtitle }}</span>
+        {% endif %}
+    </p>
+    {% if element.description|default('') is not empty %}
+        <p>{{ element.description }}</p>
+    {% endif %}
+</div>
+
