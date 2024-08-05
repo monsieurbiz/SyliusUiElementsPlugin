@@ -33,3 +33,12 @@ monsieurbiz_ui_elements:
                     choices:
                         internal: "Interne"
                         external: "Externe"
+        figures_ui_element:
+            title: "Chiffres clés"
+            description: "Ensemble de chiffres clés"
+            fields:
+                figures: "Chiffres clés"
+                figure: "Chiffre clé"
+            buttons:
+                add_element: "Ajouter un chiffre clé"
+                delete_element: "Supprimer un chiffre clé"

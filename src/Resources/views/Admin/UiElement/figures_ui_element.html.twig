@@ -1,0 +1,19 @@
+{#
+UI Element template
+type: figures_ui_element
+element fields:
+    - figures
+        - figure
+        - description
+#}
+
+<div class="ui grid segment">
+    {% for keyFigure in element.figures|default([]) %}
+        <div class="five wide column">
+            <strong>{{ keyFigure.figure }}</strong>
+            {% if keyFigure.description|default('') is not empty %}
+                <p>{{ keyFigure.description }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
