@@ -12,14 +12,21 @@ declare(strict_types=1);
 namespace MonsieurBiz\SyliusUiElementsPlugin\Form\Type\UiElement;
 
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\AsUiElement;
+use MonsieurBiz\SyliusRichEditorPlugin\Attribute\TemplatesUiElement;
 use MonsieurBiz\SyliusRichEditorPlugin\Form\Type\WysiwygType;
 use MonsieurBiz\SyliusRichEditorPlugin\WysiwygEditor\EditorInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 #[AsUiElement(
-    code: 'app.hero_ui_element',
+    code: 'monsieurbiz_ui_elements.hero_ui_element',
     icon: 'image outline',
+    title: 'monsieurbiz_ui_elements.ui_element.hero_ui_element.title',
+    description: 'monsieurbiz_ui_elements.ui_element.hero_ui_element.description',
+    templates: new TemplatesUiElement(
+        adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/hero_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/hero_ui_element.html.twig',
+    ),
     tags: [],
 )]
 class HeroUiElementType extends AbstractType
@@ -37,6 +44,7 @@ class HeroUiElementType extends AbstractType
                 'editor_toolbar_type' => EditorInterface::TOOLBAR_TYPE_CUSTOM,
                 'editor_toolbar_buttons' => [
                     ['undo', 'redo'],
+                    ['fontSize', 'formatBlock'],
                     ['bold', 'underline', 'italic', 'strike'],
                     ['fontColor', 'hiliteColor'],
                     ['removeFormat'],

@@ -7,16 +7,17 @@ element fields:
     - description
 #}
 
-{# Temporary style #}
-<div style="padding: 20px; background-color: #07353d; color: #ffefea;">
-    {% if element.title is defined and element.title is not null %}
-        <strong>{{ element.title|raw }}</strong>
-    {% endif %}
-    {% if element.subtitle is defined and element.subtitle is not null %}
-        <strong style="color: #79898c;">{{ element.subtitle }}</strong>
-    {% endif %}
-    {% if element.description is defined and element.description is not null %}
-        <p style="color: #bcc9cb;">{{ element.description }}</p>
+<div>
+    <p>
+        {% if element.title|default('') is not empty %}
+            <span class="ui huge header">{{ element.title|raw }}</span>
+        {% endif %}
+        {% if element.subtitle|default('') is not empty %}
+            <span class="ui medium header">{{ element.subtitle }}</span>
+        {% endif %}
+    </p>
+    {% if element.description|default('') is not empty %}
+        <p>{{ element.description }}</p>
     {% endif %}
 </div>
 

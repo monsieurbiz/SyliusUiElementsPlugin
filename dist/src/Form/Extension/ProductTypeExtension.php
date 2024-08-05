@@ -9,7 +9,7 @@
 
 declare(strict_types=1);
 
-namespace App\Extension;
+namespace App\Form\Extension;
 
 use MonsieurBiz\SyliusRichEditorPlugin\Form\Type\RichEditorType;
 use Sylius\Bundle\ProductBundle\Form\Type\ProductTranslationType;
@@ -25,7 +25,7 @@ class ProductTypeExtension extends AbstractTypeExtension
             'required' => false,
             'label' => 'sylius.form.product.description',
             'locale' => $builder->getName(),
-            'tags' => ['-noseeme'],
+            'tags' => [],
         ]);
     }
 

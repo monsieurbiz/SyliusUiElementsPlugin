@@ -258,8 +258,10 @@ $config
             ],
         ],
         'void_return' => true,
-        'whitespace_after_comma_in_array' => true, // alerady in symfony set
+        'whitespace_after_comma_in_array' => true, // already in symfony set
     ])
+    ->setParallelConfig(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect())
+    ->setRiskyAllowed(true)
     ->setFinder($finder)
 ;
 

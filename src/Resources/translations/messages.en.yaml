@@ -13,22 +13,23 @@ monsieurbiz_ui_elements:
             withDot: "With dot ?"
     errors:
         not_valid_url: "This value is not a valid URL (absolute or relative) or a valid hashtag."
-    hero_ui_element:
-        title: "Hero"
-        description: "Immersive zone with title and description"
-    links_ui_element:
-        title: "Links"
-        description: "Collection of links"
-        fields:
-            background:
-                choices:
-                    light: "Light"
-                    dark: "Dark"
-            alignment:
-                choices:
-                    full_width: "Full width"
-                    right: "Right"
-            type:
-                choices:
-                    internal: "Internal"
-                    external: "External"
+    ui_element:
+        hero_ui_element:
+            title: "Hero"
+            description: "Immersive zone with title and description"
+        links_ui_element:
+            title: "Links"
+            description: "Collection of links"
+            fields:
+                background:
+                    choices:
+                        light: "Light"
+                        dark: "Dark"
+                alignment:
+                    choices:
+                        full_width: "Full width"
+                        right: "Right"
+                type:
+                    choices:
+                        internal: "Internal"
+                        external: "External"

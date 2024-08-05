@@ -7,9 +7,16 @@ element fields:
     - description
 #}
 
-{# Temporary style #}
-<div style="padding: 20px; background-color: #07353d; color: #ffefea;">
-    <strong>{{ element.title|raw }}</strong>
-    <strong style="color: #79898c;">{{ element.subtitle }}</strong>
-    <p style="color: #bcc9cb;">{{ element.description }}</p>
+<div>
+    <p>
+        {% if element.title|default('') is not empty %}
+            <span class="ui huge header">{{ element.title|raw }}</span>
+        {% endif %}
+        {% if element.subtitle|default('') is not empty %}
+            <span class="ui medium header">{{ element.subtitle }}</span>
+        {% endif %}
+    </p>
+    {% if element.description|default('') is not empty %}
+        <p>{{ element.description }}</p>
+    {% endif %}
 </div>

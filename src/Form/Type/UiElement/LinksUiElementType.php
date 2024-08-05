@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace MonsieurBiz\SyliusUiElementsPlugin\Form\Type\UiElement;
 
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\AsUiElement;
+use MonsieurBiz\SyliusRichEditorPlugin\Attribute\TemplatesUiElement;
 use MonsieurBiz\SyliusRichEditorPlugin\Form\Type\UiElement\TitleType;
 use MonsieurBiz\SyliusUiElementsPlugin\Form\Type\LinkType;
 use Symfony\Component\Form\AbstractType;
@@ -21,8 +22,14 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[AsUiElement(
-    code: 'app.links_ui_element',
+    code: 'monsieurbiz_ui_elements.links_ui_element',
     icon: 'linkify',
+    title: 'monsieurbiz_ui_elements.ui_element.links_ui_element.title',
+    description: 'monsieurbiz_ui_elements.ui_element.links_ui_element.description',
+    templates: new TemplatesUiElement(
+        adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/links_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/links_ui_element.html.twig',
+    ),
     tags: [],
 )]
 class LinksUiElementType extends AbstractType
@@ -51,8 +58,8 @@ class LinksUiElementType extends AbstractType
             ->add('background', ChoiceType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.background',
                 'choices' => [
-                    'app.ui_element.links_ui_element.fields.background.choices.light' => self::BACKGROUND_LIGHT,
-                    'app.ui_element.links_ui_element.fields.background.choices.dark' => self::BACKGROUND_DARK,
+                    'monsieurbiz_ui_elements.ui_element.links_ui_element.fields.background.choices.light' => self::BACKGROUND_LIGHT,
+                    'monsieurbiz_ui_elements.ui_element.links_ui_element.fields.background.choices.dark' => self::BACKGROUND_DARK,
                 ],
                 'expanded' => true,
                 'row_attr' => [
@@ -62,8 +69,8 @@ class LinksUiElementType extends AbstractType
             ->add('alignment', ChoiceType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.alignment',
                 'choices' => [
-                    'app.ui_element.links_ui_element.fields.alignment.choices.full_width' => self::ALIGNMENT_FULL_WIDTH,
-                    'app.ui_element.links_ui_element.fields.alignment.choices.right' => self::ALIGNMENT_RIGHT,
+                    'monsieurbiz_ui_elements.ui_element.links_ui_element.fields.alignment.choices.full_width' => self::ALIGNMENT_FULL_WIDTH,
+                    'monsieurbiz_ui_elements.ui_element.links_ui_element.fields.alignment.choices.right' => self::ALIGNMENT_RIGHT,
                 ],
                 'expanded' => true,
                 'multiple' => false,
@@ -78,7 +85,7 @@ class LinksUiElementType extends AbstractType
                 'allow_delete' => true,
                 'constraints' => [new Assert\Valid()],
                 'attr' => [
-                    'class' => 'ui segment collection--flex',
+                    'class' => 'ui segment',
                 ],
             ])
         ;

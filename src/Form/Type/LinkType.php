@@ -51,8 +51,8 @@ class LinkType extends AbstractType
             ->add('type', ChoiceType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.type',
                 'choices' => [
-                    'app.ui_element.links_ui_element.fields.type.choices.internal' => self::TYPE_INTERNAL,
-                    'app.ui_element.links_ui_element.fields.type.choices.external' => self::TYPE_EXTERNAL,
+                    'monsieurbiz_ui_elements.ui_element.links_ui_element.fields.type.choices.internal' => self::TYPE_INTERNAL,
+                    'monsieurbiz_ui_elements.ui_element.links_ui_element.fields.type.choices.external' => self::TYPE_EXTERNAL,
                 ],
                 'expanded' => true,
                 'multiple' => false,
