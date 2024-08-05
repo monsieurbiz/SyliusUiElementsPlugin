@@ -25,11 +25,6 @@ Et voilà! 🎉
 
 Now, you have access to a set of UiElements for RichEditor.
 
-| FormType           | Shop Template                                                 | Admin Template                                                 |
-|--------------------|---------------------------------------------------------------|----------------------------------------------------------------|
-| HeroUiElementType  | src/Resources/views/Shop/UiElement/hero_ui_element.html.twig  | src/Resources/views/Admin/UiElement/hero_ui_element.html.twig  |
-| LinksUiElementType | src/Resources/views/Shop/UiElement/links_ui_element.html.twig | src/Resources/views/Admin/UiElement/links_ui_element.html.twig |
-
 ## License
 
 This plugin is under the MIT license.
