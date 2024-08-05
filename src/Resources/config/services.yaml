@@ -6,9 +6,5 @@ services:
 
     MonsieurBiz\SyliusUiElementsPlugin\:
         resource: '../../*'
-        exclude: '../../{Entity}'
-
-    MonsieurBiz\SyliusUiElementsPlugin\Controller\:
-        resource: '../../Controller'
-        tags: [ 'controller.service_arguments' ]
+        exclude: '../../{DependencyInjection}'
 
