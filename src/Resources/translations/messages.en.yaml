@@ -10,7 +10,8 @@ monsieurbiz_ui_elements:
             link: "Link"
             label: "Label"
             type: "Type"
-            withDot: "With dot ?"
+            content: "Content"
+            image: "Image"
     errors:
         not_valid_url: "This value is not a valid URL (absolute or relative) or a valid hashtag."
     ui_element:
@@ -42,3 +43,11 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Add key figure"
                 delete_element: "Delete key figure"
+        text_with_image_ui_element:
+            title: "Text with image"
+            description: "Text with image"
+            fields:
+                image_align:
+                    choices:
+                        left: "Left"
+                        right: "Right"
