@@ -12,22 +12,20 @@ declare(strict_types=1);
 namespace MonsieurBiz\SyliusUiElementsPlugin\Form\Type;
 
 use MonsieurBiz\SyliusRichEditorPlugin\Form\Type\UiElement\ImageType as RichEditorImageType;
+use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ImageType extends RichEditorImageType
+class ImageType extends AbstractType
 {
     /**
      * @inheritdoc
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        parent::buildForm($builder, $options);
-
         if (!$options['with_link']) {
             $builder->remove('link');
         }
-
         if (!$options['with_alignment']) {
             $builder->remove('align');
         }
@@ -35,12 +33,16 @@ class ImageType extends RichEditorImageType
 
     public function configureOptions(OptionsResolver $resolver): void
     {
-        parent::configureOptions($resolver);
         $resolver->setDefaults([
             'with_link' => true,
             'with_alignment' => true,
         ]);
         $resolver->setAllowedTypes('with_link', ['null', 'bool']);
         $resolver->setAllowedTypes('with_alignment', ['null', 'bool']);
+    }
+
+    public function getParent(): string
+    {
+        return RichEditorImageType::class;
     }
 }

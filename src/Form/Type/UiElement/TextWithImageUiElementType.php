@@ -60,8 +60,8 @@ class TextWithImageUiElementType extends AbstractType
                 'label' => 'monsieurbiz_ui_elements.common.fields.alignment',
                 'required' => true,
                 'choices' => [
-                    \sprintf('monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.fields.image_align.choices.%s', self::IMAGE_POSITION_LEFT) => self::IMAGE_POSITION_LEFT,
-                    \sprintf('monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.fields.image_align.choices.%s', self::IMAGE_POSITION_RIGHT) => self::IMAGE_POSITION_RIGHT,
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.fields.image_align.choices.left' => self::IMAGE_POSITION_LEFT,
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.fields.image_align.choices.right' => self::IMAGE_POSITION_RIGHT,
                 ],
                 'constraints' => [
                     new Assert\NotBlank(),
