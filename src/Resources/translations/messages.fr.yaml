@@ -11,6 +11,8 @@ monsieurbiz_ui_elements:
             label: "Libellé"
             type: "Type"
             withDot: "Avec point ?"
+            quote: "Citation"
+            author: "Auteur"
     errors:
         not_valid_url: "Cette valeur n'est pas une URL valide (absolue ou relative) ou un hashtag valide."
     ui_element:
@@ -42,3 +44,6 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Ajouter un chiffre clé"
                 delete_element: "Supprimer un chiffre clé"
+        customer_quote_ui_element:
+            title: "Citation client"
+            description: "Citation d'un client"
