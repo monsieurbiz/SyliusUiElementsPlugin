@@ -33,3 +33,12 @@ monsieurbiz_ui_elements:
                     choices:
                         internal: "Internal"
                         external: "External"
+        figures_ui_element:
+            title: "Key figures"
+            description: "Collection of key figures"
+            fields:
+                figures: "Key figures"
+                figure: "Key figure"
+            buttons:
+                add_element: "Add key figure"
+                delete_element: "Delete key figure"
