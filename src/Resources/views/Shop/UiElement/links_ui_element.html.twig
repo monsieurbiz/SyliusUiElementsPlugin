@@ -1,6 +1,26 @@
 {#
 UI Element template
-type: links_ui_element
+type: customer_quote_ui_element
 element fields:
-    - …
+    - title
+    - quote
+    - author
+    - link
+        - link
+        - label
+        - type
 #}
+
+<div>
+    <p>
+        {% if element.title|default('') is not empty %}
+            <span class="ui huge header">{{ element.title|raw }}</span>
+        {% endif %}
+        {% if element.subtitle|default('') is not empty %}
+            <span class="ui medium header">{{ element.subtitle }}</span>
+        {% endif %}
+    </p>
+    {% if element.description|default('') is not empty %}
+        <p>{{ element.description }}</p>
+    {% endif %}
+</div>
