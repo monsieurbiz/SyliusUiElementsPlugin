@@ -12,6 +12,7 @@ monsieurbiz_ui_elements:
             type: "Type"
             content: "Content"
             image: "Image"
+            logos: "Logos"
     errors:
         not_valid_url: "This value is not a valid URL (absolute or relative) or a valid hashtag."
     ui_element:
@@ -51,3 +52,9 @@ monsieurbiz_ui_elements:
                     choices:
                         left: "Left"
                         right: "Right"
+        logos_ui_element:
+            title: "Logos"
+            description: "Collection of logos"
+            buttons:
+                add_element: "Add logo"
+                delete_element: "Delete logo"
