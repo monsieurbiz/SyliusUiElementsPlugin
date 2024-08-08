@@ -10,7 +10,8 @@ monsieurbiz_ui_elements:
             link: "Lien"
             label: "Libellé"
             type: "Type"
-            withDot: "Avec point ?"
+            content: "Contenu"
+            image: "Image"
     errors:
         not_valid_url: "Cette valeur n'est pas une URL valide (absolue ou relative) ou un hashtag valide."
     ui_element:
@@ -42,3 +43,11 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Ajouter un chiffre clé"
                 delete_element: "Supprimer un chiffre clé"
+        text_with_image_ui_element:
+            title: "Texte avec image"
+            description: "Texte avec image"
+            fields:
+                image_align:
+                    choices:
+                        left: "Gauche"
+                        right: "Droite"
