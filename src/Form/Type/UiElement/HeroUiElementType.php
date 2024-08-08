@@ -16,6 +16,7 @@ use MonsieurBiz\SyliusRichEditorPlugin\Attribute\TemplatesUiElement;
 use MonsieurBiz\SyliusRichEditorPlugin\Form\Type\WysiwygType;
 use MonsieurBiz\SyliusRichEditorPlugin\WysiwygEditor\EditorInterface;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 #[AsUiElement(
@@ -52,11 +53,11 @@ class HeroUiElementType extends AbstractType
                     ['showBlocks', 'codeView'],
                 ],
             ])
-            ->add('subtitle', null, [
+            ->add('subtitle', TextType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.subtitle',
                 'required' => false,
             ])
-            ->add('description', null, [
+            ->add('description', TextType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.description',
                 'required' => false,
             ])
