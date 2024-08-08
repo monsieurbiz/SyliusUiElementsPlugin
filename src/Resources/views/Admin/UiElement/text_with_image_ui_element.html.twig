@@ -1,0 +1,25 @@
+{#
+UI Element template
+type: text_with_image_ui_element
+element fields:
+    - content
+    - image
+        - image
+        - alt
+        - title
+    - imageAlign
+#}
+
+<div class="ui">
+    <div class="content">
+        {{ element.content|raw }}
+    </div>
+    <img src="{{ element.image.image }}" alt="{{ element.image.alt ?? '' }}" title="{{ element.image.title ?? '' }}" class="ui image">
+    <div class="extra content">
+        <ul>
+            <li>
+                {{ 'monsieurbiz_ui_elements.common.fields.alignment'|trans }} : {{ element.imageAlign }}
+            </li>
+        </ul>
+    </div>
+</div>
