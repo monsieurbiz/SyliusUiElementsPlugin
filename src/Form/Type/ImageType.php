@@ -36,6 +36,9 @@ class ImageType extends AbstractType
         $resolver->setDefaults([
             'with_link' => true,
             'with_alignment' => true,
+            'attr' => [
+                'class' => 'ui segment',
+            ],
         ]);
         $resolver->setAllowedTypes('with_link', ['null', 'bool']);
         $resolver->setAllowedTypes('with_alignment', ['null', 'bool']);
@@ -44,5 +47,10 @@ class ImageType extends AbstractType
     public function getParent(): string
     {
         return RichEditorImageType::class;
+    }
+
+    public function getBlockPrefix(): string
+    {
+        return 'monsieurbiz_sylius_ui_elements_image';
     }
 }
