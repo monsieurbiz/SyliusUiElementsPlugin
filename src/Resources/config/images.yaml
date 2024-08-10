@@ -1,0 +1,6 @@
+liip_imagine:
+    filter_sets:
+        monsieurbiz_sylius_ui_elements_logos:
+            filters:
+                thumbnail: { size: [600, 600], mode: inset }
+                relative_resize: { widen: 300 }

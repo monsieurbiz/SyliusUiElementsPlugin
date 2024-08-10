@@ -9,17 +9,17 @@ element fields:
         - title
 #}
 
-<div class="ui">
+<div>
     {% if element.title|default('') is not empty %}
-        <div class="ui">
-            <span class="ui huge header">{{ element.title }}</span>
-        </div>
+        <div class="ui huge header">{{ element.title }}</div>
+        <div class="ui divider hidden"></div>
     {% endif %}
     <div class="ui grid">
         {% for logo in element.logos %}
             <div class="four wide column">
-                <img src="{{ logo.image|imagine_filter('sylius_medium') }}" alt="{{ logo.alt|default('') }}" title="{{ logo.title|default('') }}" width="180">
+                <img src="{{ logo.image|imagine_filter('monsieurbiz_sylius_ui_elements_logos') }}" alt="{{ logo.alt|default('') }}" title="{{ logo.title|default('') }}" width="180">
             </div>
         {% endfor %}
     </div>
+    <div class="ui divider hidden"></div>
 </div>

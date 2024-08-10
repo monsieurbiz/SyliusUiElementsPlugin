@@ -27,7 +27,7 @@ use Symfony\Component\Validator\Constraints as Assert;
     description: 'monsieurbiz_ui_elements.ui_element.logos_ui_element.description',
     templates: new TemplatesUiElement(
         adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/logos_ui_element.html.twig',
-        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/logos_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/logos_ui_element.html.twig',
     ),
     tags: [],
     wireframe: 'logos',
