@@ -30,6 +30,7 @@ use Symfony\Component\Validator\Constraints as Assert;
         frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/logos_ui_element.html.twig',
     ),
     tags: [],
+    wireframe: 'logos',
 )]
 class LogosUiElementType extends AbstractType
 {

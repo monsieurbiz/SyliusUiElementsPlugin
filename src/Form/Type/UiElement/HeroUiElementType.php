@@ -29,6 +29,7 @@ use Symfony\Component\Form\FormBuilderInterface;
         frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/hero_ui_element.html.twig',
     ),
     tags: [],
+    wireframe: 'hero',
 )]
 class HeroUiElementType extends AbstractType
 {

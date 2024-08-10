@@ -31,6 +31,7 @@ use Symfony\Component\Validator\Constraints as Assert;
         frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/links_ui_element.html.twig',
     ),
     tags: [],
+    wireframe: 'links',
 )]
 class LinksUiElementType extends AbstractType
 {
@@ -51,9 +52,6 @@ class LinksUiElementType extends AbstractType
             ->add('title', TitleType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.title',
                 'required' => false,
-                'attr' => [
-                    'class' => 'ui segment',
-                ],
             ])
             ->add('background', ChoiceType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.background',
@@ -85,7 +83,7 @@ class LinksUiElementType extends AbstractType
                 'allow_delete' => true,
                 'constraints' => [new Assert\Valid()],
                 'attr' => [
-                    'class' => 'ui segment',
+                    'class' => 'ui secondary segment collection--flex',
                 ],
             ])
         ;

@@ -31,6 +31,7 @@ use Symfony\Component\Validator\Constraints as Assert;
         frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/customer_quote_ui_element.html.twig',
     ),
     tags: [],
+    wireframe: 'customer-quote',
 )]
 class CustomerQuoteUiElementType extends AbstractType
 {

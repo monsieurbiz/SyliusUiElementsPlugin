@@ -28,6 +28,8 @@ use Symfony\Component\Validator\Constraints as Assert;
         adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/figures_ui_element.html.twig',
         frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/figures_ui_element.html.twig',
     ),
+    tags: [],
+    wireframe: 'figures',
 )]
 class FiguresUiElementType extends AbstractType
 {

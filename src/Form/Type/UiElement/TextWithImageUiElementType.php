@@ -30,6 +30,7 @@ use Symfony\Component\Validator\Constraints as Assert;
         frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/text_with_image_ui_element.html.twig',
     ),
     tags: [],
+    wireframe: 'text-with-image',
 )]
 class TextWithImageUiElementType extends AbstractType
 {
