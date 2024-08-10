@@ -26,7 +26,7 @@ use Symfony\Component\Validator\Constraints as Assert;
     description: 'monsieurbiz_ui_elements.ui_element.figures_ui_element.description',
     templates: new TemplatesUiElement(
         adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/figures_ui_element.html.twig',
-        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/figures_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/figures_ui_element.html.twig',
     ),
     tags: [],
     wireframe: 'figures',
@@ -47,7 +47,7 @@ class FiguresUiElementType extends AbstractType
             'allow_delete' => true,
             'constraints' => [new Assert\Valid()],
             'attr' => [
-                'class' => 'ui segment secondary',
+                'class' => 'ui segment secondary collection--flex',
             ],
         ]);
     }

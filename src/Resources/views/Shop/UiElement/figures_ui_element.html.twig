@@ -7,13 +7,30 @@ element fields:
         - description
 #}
 
-<div class="ui grid segment">
+{% set columns = 'five' %}
+{% if element.figures|length == 4 %}
+    {% set columns = 'four' %}
+{% endif %}
+{% if element.figures|length == 3 %}
+    {% set columns = 'three' %}
+{% endif %}
+{% if element.figures|length == 2 %}
+    {% set columns = 'two' %}
+{% endif %}
+{% if element.figures|length == 1 %}
+    {% set columns = 'one' %}
+{% endif %}
+
+<div class="ui grid stackable {{ columns }} columns" style="padding: 0 3vw;">
     {% for keyFigure in element.figures|default([]) %}
-        <div class="five wide column">
-            <strong>{{ keyFigure.figure }}</strong>
-            {% if keyFigure.description|default('') is not empty %}
-                <p>{{ keyFigure.description }}</p>
-            {% endif %}
+        <div class="column">
+            <div class="ui segment">
+                <strong>{{ keyFigure.figure }}</strong>
+                {% if keyFigure.description|default('') is not empty %}
+                    <p>{{ keyFigure.description }}</p>
+                {% endif %}
+            </div>
         </div>
     {% endfor %}
 </div>
+<div class="ui divider hidden"></div>
