@@ -27,7 +27,7 @@ use Symfony\Component\Validator\Constraints as Assert;
     description: 'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.description',
     templates: new TemplatesUiElement(
         adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/text_with_image_ui_element.html.twig',
-        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/text_with_image_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/text_with_image_ui_element.html.twig',
     ),
     tags: [],
     wireframe: 'text-with-image',

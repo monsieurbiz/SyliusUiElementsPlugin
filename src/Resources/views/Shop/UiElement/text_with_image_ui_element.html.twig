@@ -9,17 +9,18 @@ element fields:
         - title
     - imageAlign
 #}
-
-<div class="ui">
-    <div class="content">
-        {{ element.content|raw }}
-    </div>
-    <img src="{{ element.image.image }}" alt="{{ element.image.alt ?? '' }}" title="{{ element.image.title ?? '' }}" class="ui image">
-    <div class="extra content">
-        <ul>
-            <li>
-                {{ 'monsieurbiz_ui_elements.common.fields.alignment'|trans }} : {{ element.imageAlign }}
-            </li>
-        </ul>
-    </div>
+{% set isRightAlign = (element.imageAlign|default('')) == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\UiElement\\TextWithImageUiElementType::IMAGE_POSITION_RIGHT') %}
+<div class="ui container">
+    {% if element.image|default(null) is not empty and element.image.image|default('') is not empty %}
+        <img 
+            src="{{ element.image.image|imagine_filter('monsieurbiz_sylius_ui_elements_text_with_image') }}" 
+            alt="{{ element.image.alt|default('') }}" 
+            title="{{ element.image.title|default('') }}" 
+            class="ui image {{ isRightAlign ? 'right' : 'left' }} floated"
+            {% if isRightAlign %}style="margin-left: 10px; margin-bottom: 10px;"{% endif %}
+            {% if not isRightAlign %}style="margin-right: 10px; margin-bottom: 10px;"{% endif %}
+        >
+    {% endif %}
+    {{ element.content|default('')|raw }}
 </div>
+<div class="ui divider hidden"></div>
