@@ -1,0 +1,25 @@
+{#
+UI Element template
+type: logos_ui_element
+element fields:
+    - title
+    - logos
+        - image
+        - alt
+        - title
+#}
+
+<div class="ui">
+    {% if element.title|default('') is not empty %}
+        <div class="ui">
+            <span class="ui huge header">{{ element.title }}</span>
+        </div>
+    {% endif %}
+    <div class="ui grid">
+        {% for logo in element.logos %}
+            <div class="four wide column">
+                <img src="{{ logo.image|imagine_filter('sylius_medium') }}" alt="{{ logo.alt|default('') }}" title="{{ logo.title|default('') }}" width="180">
+            </div>
+        {% endfor %}
+    </div>
+</div>
