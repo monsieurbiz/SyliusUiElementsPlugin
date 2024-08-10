@@ -52,13 +52,11 @@ class TextWithImageUiElementType extends AbstractType
                 ],
             ])
             ->add('image', ImageType::class, [
-                'label' => 'monsieurbiz_richeditor_plugin.ui_element.monsieurbiz.image.field.image',
-                'required' => true,
-                'with_link' => false,
-                'with_alignment' => false,
+                'label' => 'monsieurbiz_ui_elements.common.fields.image_with_text',
+                'required' => false,
             ])
             ->add('imageAlign', ChoiceType::class, [
-                'label' => 'monsieurbiz_ui_elements.common.fields.alignment',
+                'label' => 'monsieurbiz_ui_elements.common.fields.image_alignment',
                 'required' => true,
                 'choices' => [
                     'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.fields.image_align.choices.left' => self::IMAGE_POSITION_LEFT,

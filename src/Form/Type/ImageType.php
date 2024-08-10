@@ -29,19 +29,24 @@ class ImageType extends AbstractType
         if (!$options['with_alignment']) {
             $builder->remove('align');
         }
+        if (!$options['with_title']) {
+            $builder->remove('title');
+        }
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'with_link' => true,
-            'with_alignment' => true,
+            'with_link' => false,
+            'with_alignment' => false,
+            'with_title' => false,
             'attr' => [
                 'class' => 'ui segment',
             ],
         ]);
         $resolver->setAllowedTypes('with_link', ['null', 'bool']);
         $resolver->setAllowedTypes('with_alignment', ['null', 'bool']);
+        $resolver->setAllowedTypes('with_title', ['null', 'bool']);
     }
 
     public function getParent(): string

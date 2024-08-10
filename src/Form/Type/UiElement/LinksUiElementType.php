@@ -17,9 +17,9 @@ use MonsieurBiz\SyliusUiElementsPlugin\Form\Type\LinkType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 #[AsUiElement(
     code: 'monsieurbiz_ui_elements.links_ui_element',

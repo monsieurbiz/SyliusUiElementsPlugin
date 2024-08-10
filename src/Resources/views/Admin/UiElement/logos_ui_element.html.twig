@@ -6,7 +6,6 @@ element fields:
     - logos
         - image
         - alt
-        - title
 #}
 
 <div>
@@ -17,7 +16,7 @@ element fields:
     <div class="ui grid">
         {% for logo in element.logos %}
             <div class="four wide column">
-                <img src="{{ logo.image|imagine_filter('monsieurbiz_sylius_ui_elements_logos') }}" alt="{{ logo.alt|default('') }}" title="{{ logo.title|default('') }}" width="180">
+                <img src="{{ logo.image|imagine_filter('monsieurbiz_sylius_ui_elements_logos') }}" alt="{{ logo.alt|default('') }}" width="180">
             </div>
         {% endfor %}
     </div>

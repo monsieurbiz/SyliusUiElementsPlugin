@@ -6,7 +6,6 @@ element fields:
     - image
         - image
         - alt
-        - title
     - imageAlign
 #}
 {% set isRightAlign = (element.imageAlign|default('')) == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\UiElement\\TextWithImageUiElementType::IMAGE_POSITION_RIGHT') %}
@@ -15,7 +14,6 @@ element fields:
         <img 
             src="{{ element.image.image|imagine_filter('monsieurbiz_sylius_ui_elements_text_with_image') }}" 
             alt="{{ element.image.alt|default('') }}" 
-            title="{{ element.image.title|default('') }}" 
             class="ui image {{ isRightAlign ? 'right' : 'left' }} floated"
             {% if isRightAlign %}style="margin-left: 10px; margin-bottom: 10px;"{% endif %}
             {% if not isRightAlign %}style="margin-right: 10px; margin-bottom: 10px;"{% endif %}
