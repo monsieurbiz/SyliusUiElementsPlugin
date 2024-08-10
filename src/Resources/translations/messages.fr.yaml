@@ -10,6 +10,8 @@ monsieurbiz_ui_elements:
             link: "Lien"
             label: "Libellé"
             type: "Type"
+            quote: "Citation"
+            author: "Auteur"
             content: "Contenu"
             image: "Image"
             logos: "Logos"
@@ -44,6 +46,9 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Ajouter un chiffre clé"
                 delete_element: "Supprimer un chiffre clé"
+        customer_quote_ui_element:
+            title: "Citation client"
+            description: "Citation d'un client"
         text_with_image_ui_element:
             title: "Texte avec image"
             description: "Texte avec image"

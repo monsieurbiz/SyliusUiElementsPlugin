@@ -2,5 +2,30 @@
 UI Element template
 type: links_ui_element
 element fields:
-    - …
+    - title
+    - background
+    - alignment
+    - links
+        - link
+        - label
+        - type
 #}
+
+<div class="ui grid {{ element.background == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\UiElement\\LinksUiElementType::BACKGROUND_DARK') ? 'inverted' }}">
+    {% if element.title.content|default('') is not empty %}
+        <span class="ui huge header">{{ element.title.content|raw }}</span>
+    {% endif %}
+    {% for linkItem in element.links %}
+        <div class="four wide column">
+            <a href="{{ linkItem.link }}">{{ linkItem.label }}</a> <br>
+            <small>{{ 'monsieurbiz_ui_elements.common.fields.type'|trans }} : {{ linkItem.type }}</small>
+        </div>
+    {% endfor %}
+    <div class="extra content">
+        <ul>
+            <li>
+                {{ 'monsieurbiz_ui_elements.common.fields.alignment'|trans }} : {{ element.alignment }}
+            </li>
+        </ul>
+    </div>
+</div>
