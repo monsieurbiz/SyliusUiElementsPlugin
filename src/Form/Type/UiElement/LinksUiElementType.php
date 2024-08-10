@@ -28,7 +28,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
     description: 'monsieurbiz_ui_elements.ui_element.links_ui_element.description',
     templates: new TemplatesUiElement(
         adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/links_ui_element.html.twig',
-        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/links_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/links_ui_element.html.twig',
     ),
     tags: [],
     wireframe: 'links',

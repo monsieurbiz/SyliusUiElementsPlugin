@@ -42,11 +42,13 @@ class LinkType extends AbstractType
                             new Assert\Regex(['pattern' => '`^(#|/.*)$`']),
                         ],
                     ]),
+                    new Assert\NotBlank(),
                 ],
             ])
             ->add('label', TextType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.label',
                 'required' => true,
+                'constraints' => [new Assert\NotBlank()],
             ])
             ->add('type', ChoiceType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.link_type',
