@@ -26,7 +26,7 @@ use Symfony\Component\Form\FormBuilderInterface;
     description: 'monsieurbiz_ui_elements.ui_element.hero_ui_element.description',
     templates: new TemplatesUiElement(
         adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/hero_ui_element.html.twig',
-        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/hero_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/hero_ui_element.html.twig',
     ),
     tags: [],
     wireframe: 'hero',
@@ -46,17 +46,12 @@ class HeroUiElementType extends AbstractType
                 'editor_toolbar_type' => EditorInterface::TOOLBAR_TYPE_CUSTOM,
                 'editor_toolbar_buttons' => [
                     ['undo', 'redo'],
-                    ['fontSize', 'formatBlock'],
                     ['bold', 'underline', 'italic', 'strike'],
                     ['fontColor', 'hiliteColor'],
                     ['removeFormat'],
                     ['link'],
                     ['showBlocks', 'codeView'],
                 ],
-            ])
-            ->add('subtitle', TextType::class, [
-                'label' => 'monsieurbiz_ui_elements.common.fields.subtitle',
-                'required' => false,
             ])
             ->add('description', TextType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.description',
