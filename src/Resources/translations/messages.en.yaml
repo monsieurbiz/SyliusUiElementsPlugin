@@ -19,10 +19,10 @@ monsieurbiz_ui_elements:
         not_valid_url: "This value is not a valid URL (absolute or relative) or a valid hashtag."
     ui_element:
         hero_ui_element:
-            title: "Hero"
+            title: "Hero Element"
             description: "Immersive zone with title and description"
         links_ui_element:
-            title: "Links"
+            title: "Links Element"
             description: "Collection of links"
             fields:
                 background:
@@ -38,7 +38,7 @@ monsieurbiz_ui_elements:
                         internal: "Internal"
                         external: "External"
         figures_ui_element:
-            title: "Key figures"
+            title: "Key Figures Element"
             description: "Collection of key figures"
             fields:
                 figures: "Key figures"
@@ -47,10 +47,10 @@ monsieurbiz_ui_elements:
                 add_element: "Add key figure"
                 delete_element: "Delete key figure"
         customer_quote_ui_element:
-            title: "Customer quote"
+            title: "Customer Quote Element"
             description: "Quote from a customer"
         text_with_image_ui_element:
-            title: "Text with image"
+            title: "Text with Image Element"
             description: "Text with image"
             fields:
                 image_align:
@@ -58,7 +58,7 @@ monsieurbiz_ui_elements:
                         left: "Left"
                         right: "Right"
         logos_ui_element:
-            title: "Logos"
+            title: "Logos Element"
             description: "Collection of logos"
             buttons:
                 add_element: "Add logo"
