@@ -45,9 +45,9 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Add key figure"
                 delete_element: "Delete key figure"
-        customer_quote_ui_element:
-            title: "Customer Quote Element"
-            description: "Quote from a customer"
+        advanced_quote_ui_element:
+            title: "Advanced Quote Element"
+            description: "Quote with title and button with a link"
         text_with_image_ui_element:
             title: "Text with Image Element"
             description: "Text with image"

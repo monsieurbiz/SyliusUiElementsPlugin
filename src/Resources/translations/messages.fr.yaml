@@ -45,9 +45,9 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Ajouter un chiffre clé"
                 delete_element: "Supprimer un chiffre clé"
-        customer_quote_ui_element:
-            title: "Lame Citation client"
-            description: "Citation d'un client"
+        advanced_quote_ui_element:
+            title: "Lame Citation avancée"
+            description: "Citation avec possibilité de titre et bouton avec un lien"
         text_with_image_ui_element:
             title: "Lame Texte avec image"
             description: "Texte avec image"

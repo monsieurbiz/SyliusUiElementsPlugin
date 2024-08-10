@@ -22,18 +22,18 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[AsUiElement(
-    code: 'monsieurbiz_ui_elements.customer_quote_ui_element',
+    code: 'monsieurbiz_ui_elements.advanced_quote_ui_element',
     icon: 'quote left',
-    title: 'monsieurbiz_ui_elements.ui_element.customer_quote_ui_element.title',
-    description: 'monsieurbiz_ui_elements.ui_element.customer_quote_ui_element.description',
+    title: 'monsieurbiz_ui_elements.ui_element.advanced_quote_ui_element.title',
+    description: 'monsieurbiz_ui_elements.ui_element.advanced_quote_ui_element.description',
     templates: new TemplatesUiElement(
-        adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/customer_quote_ui_element.html.twig',
-        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Front/UiElement/customer_quote_ui_element.html.twig',
+        adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/advanced_quote_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/advanced_quote_ui_element.html.twig',
     ),
     tags: [],
-    wireframe: 'customer-quote',
+    wireframe: 'advanced-quote',
 )]
-class CustomerQuoteUiElementType extends AbstractType
+class AdvancedQuoteUiElementType extends AbstractType
 {
     /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
@@ -52,7 +52,6 @@ class CustomerQuoteUiElementType extends AbstractType
                 'editor_toolbar_type' => EditorInterface::TOOLBAR_TYPE_CUSTOM,
                 'editor_toolbar_buttons' => [
                     ['undo', 'redo'],
-                    ['fontSize', 'formatBlock'],
                     ['bold', 'underline', 'italic', 'strike'],
                     ['fontColor', 'hiliteColor'],
                     ['removeFormat'],
@@ -69,21 +68,21 @@ class CustomerQuoteUiElementType extends AbstractType
             ])
             ->add('link', UrlType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.link',
-                'required' => true,
+                'required' => false,
                 'constraints' => [
                     new Assert\AtLeastOneOf([
                         'includeInternalMessages' => false,
                         'message' => 'monsieurbiz_ui_elements.errors.not_valid_url',
                         'constraints' => [
                             new Assert\Url(['protocols' => ['http', 'https'], 'relativeProtocol' => true]),
-                            new Assert\Regex(['pattern' => '`^(#|/[^/])`']),
+                            new Assert\Regex(['pattern' => '`^(#|/.*)$`']),
                         ],
                     ]),
                 ],
             ])
             ->add('linkLabel', TextType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.label',
-                'required' => true,
+                'required' => false,
             ])
         ;
     }
