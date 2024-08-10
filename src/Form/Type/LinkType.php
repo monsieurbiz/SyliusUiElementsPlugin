@@ -39,7 +39,7 @@ class LinkType extends AbstractType
                         'message' => 'monsieurbiz_ui_elements.errors.not_valid_url',
                         'constraints' => [
                             new Assert\Url(['protocols' => ['http', 'https'], 'relativeProtocol' => true]),
-                            new Assert\Regex(['pattern' => '`^(#|/[^/])`']),
+                            new Assert\Regex(['pattern' => '`^(#|/.*)$`']),
                         ],
                     ]),
                 ],
@@ -49,16 +49,16 @@ class LinkType extends AbstractType
                 'required' => true,
             ])
             ->add('type', ChoiceType::class, [
-                'label' => 'monsieurbiz_ui_elements.common.fields.type',
+                'label' => 'monsieurbiz_ui_elements.common.fields.link_type',
                 'choices' => [
                     'monsieurbiz_ui_elements.ui_element.links_ui_element.fields.type.choices.internal' => self::TYPE_INTERNAL,
                     'monsieurbiz_ui_elements.ui_element.links_ui_element.fields.type.choices.external' => self::TYPE_EXTERNAL,
                 ],
-                'expanded' => true,
                 'multiple' => false,
                 'row_attr' => [
                     'class' => 'ui segment',
                 ],
+                'constraints' => [new Assert\NotBlank()],
             ])
         ;
     }

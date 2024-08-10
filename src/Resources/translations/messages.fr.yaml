@@ -8,6 +8,7 @@ monsieurbiz_ui_elements:
             alignment: "Alignement"
             links: "Liens"
             link: "Lien"
+            link_type: "Ouverture du lien"
             label: "Libellé"
             type: "Type"
             quote: "Citation"
@@ -15,8 +16,6 @@ monsieurbiz_ui_elements:
             content: "Contenu"
             image: "Image"
             logos: "Logos"
-    errors:
-        not_valid_url: "Cette valeur n'est pas une URL valide (absolue ou relative) ou un hashtag valide."
     ui_element:
         hero_ui_element:
             title: "Lame Hero"
@@ -35,8 +34,8 @@ monsieurbiz_ui_elements:
                         right: "À droite"
                 type:
                     choices:
-                        internal: "Interne"
-                        external: "Externe"
+                        internal: "Même fenêtre"
+                        external: "Nouvelle fenêtre"
         figures_ui_element:
             title: "Lame Chiffres clés"
             description: "Ensemble de chiffres clés"

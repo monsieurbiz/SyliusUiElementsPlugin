@@ -8,6 +8,7 @@ monsieurbiz_ui_elements:
             alignment: "Alignment"
             links: "Links"
             link: "Link"
+            link_type: "Open link"
             label: "Label"
             type: "Type"
             quote: "Quote"
@@ -15,8 +16,6 @@ monsieurbiz_ui_elements:
             content: "Content"
             image: "Image"
             logos: "Logos"
-    errors:
-        not_valid_url: "This value is not a valid URL (absolute or relative) or a valid hashtag."
     ui_element:
         hero_ui_element:
             title: "Hero Element"
@@ -35,8 +34,8 @@ monsieurbiz_ui_elements:
                         right: "Right"
                 type:
                     choices:
-                        internal: "Internal"
-                        external: "External"
+                        internal: "Same window"
+                        external: "New window"
         figures_ui_element:
             title: "Key Figures Element"
             description: "Collection of key figures"
