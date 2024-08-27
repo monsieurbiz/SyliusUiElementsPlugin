@@ -47,6 +47,7 @@ class LogosUiElementType extends AbstractType
             ->add('logos', CollectionType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.logos',
                 'entry_type' => ImageType::class,
+                'prototype_name' => '__logo__',
                 'allow_add' => true,
                 'allow_delete' => true,
                 'constraints' => [new Assert\Valid()],

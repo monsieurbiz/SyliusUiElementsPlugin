@@ -1,0 +1,49 @@
+{#
+UI Element template
+type: figures_ui_element
+element fields:
+    - badges
+        - title
+        - image
+        - link
+            - link
+            - type
+#}
+
+ {% if element.badges|default([])|length > 0 %}
+    {% set columns = 'four' %}
+    {% if element.badges|length == 3 %}
+        {% set columns = 'three' %}
+    {% endif %}
+    {% if element.badges|length == 2 %}
+        {% set columns = 'two' %}
+    {% endif %}
+    {% if element.badges|length == 1 %}
+        {% set columns = 'one' %}
+    {% endif %}
+        <div class="ui grid stackable {{ columns }} columns" style="padding: 0 3vw;">
+            {% for badge in element.badges %}
+                {% set isExternalLink = (badge.link.type|default(null)) == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\LinkType::TYPE_EXTERNAL') %}
+                <div class="column">
+                    {% if badge.link.link|default(null) is not empty %}
+                        <a href="{{ badge.link.link }}" {% if isExternalLink %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                    {% endif %}
+                        <div class="ui card">
+                            {% if badge.image|default(null) is not empty %}
+                                <div class="image">
+                                    <img src="{{ badge.image|imagine_filter('monsieurbiz_sylius_ui_elements_badges') }}">
+                                </div>
+                            {% endif %}
+                            {% if badge.title|default(null) is not empty %}
+                                <div class="content">
+                                    {{ badge.title|raw }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% if badge.link.link|default(null) is not empty %}
+                        </a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+{% endif %}

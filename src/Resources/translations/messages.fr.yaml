@@ -64,6 +64,8 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Ajouter un logo"
                 delete_element: "Supprimer un logo"
-        header_ui_element:
-            title: "Lame En-tête"
-            description: "En-tête de page avec titre et description"
+        badges_ui_element:
+            title: "Lame Badges"
+            description: "Ensemble de badges avec image, titre et lien"
+            fields:
+                badges: "Badges"
