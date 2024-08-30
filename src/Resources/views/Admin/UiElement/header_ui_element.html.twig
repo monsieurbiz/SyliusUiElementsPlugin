@@ -1,0 +1,13 @@
+{#
+UI Element template
+type: header_ui_element
+element fields:
+    - title
+    - description
+#}
+{% if element.title|default('') is not empty %}
+    <h1 >{{ element.title|raw }}</h1>
+{% endif %}
+{% if element.description|default('') is not empty %}
+    {{ element.description|raw }}
+{% endif %}
