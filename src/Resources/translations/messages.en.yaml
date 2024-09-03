@@ -64,6 +64,8 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Add logo"
                 delete_element: "Delete logo"
-        header_ui_element:
-            title: "Header Element"
-            description: "Header with title and subtitle"
+        badges_ui_element:
+            title: "Badges Element"
+            description: "Collection of badges with image, title  and link"
+            fields:
+                badges: "Badges"

@@ -78,6 +78,7 @@ class LinksUiElementType extends AbstractType
             ])
             ->add('links', CollectionType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.links',
+                'prototype_name' => '__link__',
                 'entry_type' => LinkType::class,
                 'allow_add' => true,
                 'allow_delete' => true,

@@ -43,6 +43,7 @@ class FiguresUiElementType extends AbstractType
             'button_add_label' => 'monsieurbiz_ui_elements.ui_element.figures_ui_element.buttons.add_element',
             'button_delete_label' => 'monsieurbiz_ui_elements.ui_element.figures_ui_element.buttons.delete_element',
             'entry_type' => FigureType::class,
+            'prototype_name' => '__figure__',
             'allow_add' => true,
             'allow_delete' => true,
             'constraints' => [new Assert\Valid()],
