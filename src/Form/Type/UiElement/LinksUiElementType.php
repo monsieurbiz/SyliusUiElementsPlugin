@@ -56,11 +56,8 @@ class LinksUiElementType extends AbstractType
             ->add('background', ChoiceType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.background',
                 'choices' => [
-                    'monsieurbiz_ui_elements.ui_element.links_ui_element.fields.background.choices.light' => self::BACKGROUND_LIGHT,
-                    'monsieurbiz_ui_elements.ui_element.links_ui_element.fields.background.choices.dark' => self::BACKGROUND_DARK,
-                ],
-                'row_attr' => [
-                    'class' => 'ui segment',
+                    'monsieurbiz_ui_elements.common.form_choices.background.light' => self::BACKGROUND_LIGHT,
+                    'monsieurbiz_ui_elements.common.form_choices.background.dark' => self::BACKGROUND_DARK,
                 ],
                 'constraints' => [new Assert\NotBlank()],
             ])

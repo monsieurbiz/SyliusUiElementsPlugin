@@ -18,6 +18,10 @@ monsieurbiz_ui_elements:
             image_alignment: "Alignement de l'image"
             image_with_text: "Image accompagnant le texte"
             logos: "Logos"
+        form_choices:
+            background:
+                light: "Clair"
+                dark: "Foncé"
     ui_element:
         hero_ui_element:
             title: "Lame Hero"
@@ -26,10 +30,6 @@ monsieurbiz_ui_elements:
             title: "Lame Liens"
             description: "Ensemble de liens"
             fields:
-                background:
-                    choices:
-                        light: "Clair"
-                        dark: "Foncé"
                 alignment:
                     choices:
                         full_width: "Pleine largeur"
