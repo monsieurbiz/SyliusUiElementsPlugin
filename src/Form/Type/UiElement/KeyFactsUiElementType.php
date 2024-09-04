@@ -13,37 +13,37 @@ namespace MonsieurBiz\SyliusUiElementsPlugin\Form\Type\UiElement;
 
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\AsUiElement;
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\TemplatesUiElement;
-use MonsieurBiz\SyliusUiElementsPlugin\Form\Type\FigureType;
+use MonsieurBiz\SyliusUiElementsPlugin\Form\Type\KeyFactType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[AsUiElement(
-    code: 'monsieurbiz_ui_elements.figures_ui_element',
-    icon: 'percent',
-    title: 'monsieurbiz_ui_elements.ui_element.figures_ui_element.title',
-    description: 'monsieurbiz_ui_elements.ui_element.figures_ui_element.description',
+    code: 'monsieurbiz_ui_elements.key_facts_ui_element',
+    icon: 'key',
+    title: 'monsieurbiz_ui_elements.ui_element.key_facts_ui_element.title',
+    description: 'monsieurbiz_ui_elements.ui_element.key_facts_ui_element.description',
     templates: new TemplatesUiElement(
-        adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/figures_ui_element.html.twig',
-        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/figures_ui_element.html.twig',
+        adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/key_facts_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/key_facts_ui_element.html.twig',
     ),
     tags: [],
-    wireframe: 'figures',
+    wireframe: 'key-facts',
 )]
-class FiguresUiElementType extends AbstractType
+class KeyFactsUiElementType extends AbstractType
 {
     /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $builder->add('figures', CollectionType::class, [
-            'label' => 'monsieurbiz_ui_elements.ui_element.figures_ui_element.fields.figures',
-            'button_add_label' => 'monsieurbiz_ui_elements.ui_element.figures_ui_element.buttons.add_element',
-            'button_delete_label' => 'monsieurbiz_ui_elements.ui_element.figures_ui_element.buttons.delete_element',
-            'entry_type' => FigureType::class,
-            'prototype_name' => '__figure__',
+        $builder->add('key_facts', CollectionType::class, [
+            'label' => 'monsieurbiz_ui_elements.ui_element.key_facts_ui_element.fields.key_facts',
+            'button_add_label' => 'monsieurbiz_ui_elements.ui_element.key_facts_ui_element.buttons.add_element',
+            'button_delete_label' => 'monsieurbiz_ui_elements.ui_element.key_facts_ui_element.buttons.delete_element',
+            'entry_type' => KeyFactType::class,
+            'prototype_name' => '__key_fact__',
             'allow_add' => true,
             'allow_delete' => true,
             'constraints' => [new Assert\Valid()],

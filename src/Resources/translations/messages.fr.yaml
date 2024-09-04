@@ -38,12 +38,11 @@ monsieurbiz_ui_elements:
                     choices:
                         internal: "Même fenêtre"
                         external: "Nouvelle fenêtre"
-        figures_ui_element:
-            title: "Lame Chiffres clés"
-            description: "Ensemble de chiffres clés"
+        key_facts_ui_element:
+            title: "Lame éléments clés"
+            description: "Ensemble d'élement clés à mettre en avant"
             fields:
-                figures: "Chiffres clés"
-                figure: "Chiffre clé"
+                key_facts: "Éléments clés"
             buttons:
                 add_element: "Ajouter un chiffre clé"
                 delete_element: "Supprimer un chiffre clé"

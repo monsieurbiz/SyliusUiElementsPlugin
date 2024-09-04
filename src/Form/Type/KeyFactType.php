@@ -16,7 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class FigureType extends AbstractType
+class KeyFactType extends AbstractType
 {
     /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
@@ -24,9 +24,9 @@ class FigureType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('figure', TextType::class, [
+            ->add('title', TextType::class, [
                 'required' => true,
-                'label' => 'monsieurbiz_ui_elements.ui_element.figures_ui_element.fields.figure',
+                'label' => 'monsieurbiz_ui_elements.common.fields.title',
                 'constraints' => [
                     new Assert\NotBlank(),
                     new Assert\Length(['max' => 255]),

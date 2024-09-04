@@ -1,33 +1,33 @@
 {#
 UI Element template
-type: figures_ui_element
+type: key_facts_ui_element
 element fields:
-    - figures
-        - figure
+    - key_facts
+        - title
         - description
 #}
 
 {% set columns = 'five' %}
-{% if element.figures|length == 4 %}
+{% if element.key_facts|length == 4 %}
     {% set columns = 'four' %}
 {% endif %}
-{% if element.figures|length == 3 %}
+{% if element.key_facts|length == 3 %}
     {% set columns = 'three' %}
 {% endif %}
-{% if element.figures|length == 2 %}
+{% if element.key_facts|length == 2 %}
     {% set columns = 'two' %}
 {% endif %}
-{% if element.figures|length == 1 %}
+{% if element.key_facts|length == 1 %}
     {% set columns = 'one' %}
 {% endif %}
 
 <div class="ui grid stackable {{ columns }} columns" style="padding: 0 3vw;">
-    {% for keyFigure in element.figures|default([]) %}
+    {% for keyFact in element.key_facts|default([]) %}
         <div class="column">
             <div class="ui segment">
-                <strong>{{ keyFigure.figure }}</strong>
-                {% if keyFigure.description|default('') is not empty %}
-                    <p>{{ keyFigure.description }}</p>
+                <strong>{{ keyFact.title }}</strong>
+                {% if keyFact.description|default('') is not empty %}
+                    <p>{{ keyFact.description }}</p>
                 {% endif %}
             </div>
         </div>
