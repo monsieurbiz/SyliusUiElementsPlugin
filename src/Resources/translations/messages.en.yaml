@@ -75,3 +75,6 @@ monsieurbiz_ui_elements:
         featured_text_ui_element:
             title: "Featured Text Element"
             description: "Highlighted text with left stroke and larger text"
+        framed_text_ui_element:
+            title: "Framed Text Element"
+            description: "Text displayed in a frame"
