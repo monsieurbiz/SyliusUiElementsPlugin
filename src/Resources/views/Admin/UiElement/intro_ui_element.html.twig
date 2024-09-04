@@ -1,0 +1,10 @@
+{#
+UI Element template
+type: intro_ui_element
+element fields:
+    - content
+#}
+<div class="ui container" style="font-size: 1.3rem;">
+    {{ element.content|default('')|raw }}
+</div>
+<div class="ui divider hidden"></div>

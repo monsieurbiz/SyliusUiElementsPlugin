@@ -69,3 +69,6 @@ monsieurbiz_ui_elements:
             description: "Ensemble de badges avec image, titre et lien"
             fields:
                 badges: "Badges"
+        intro_ui_element:
+            title: "Lame Intro"
+            description: "Texte d'introduction mis en avant"
