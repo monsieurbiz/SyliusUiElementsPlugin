@@ -20,18 +20,18 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[AsUiElement(
-    code: 'monsieurbiz_ui_elements.intro_ui_element',
+    code: 'monsieurbiz_ui_elements.featured_text_ui_element',
     icon: 'font',
-    title: 'monsieurbiz_ui_elements.ui_element.intro_ui_element.title',
-    description: 'monsieurbiz_ui_elements.ui_element.intro_ui_element.description',
+    title: 'monsieurbiz_ui_elements.ui_element.featured_text_ui_element.title',
+    description: 'monsieurbiz_ui_elements.ui_element.featured_text_ui_element.description',
     templates: new TemplatesUiElement(
-        adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/intro_ui_element.html.twig',
-        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/intro_ui_element.html.twig',
+        adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/featured_text_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/featured_text_ui_element.html.twig',
     ),
     tags: [],
-    wireframe: 'intro',
+    wireframe: 'featured-text',
 )]
-class IntroUiElementType extends AbstractType
+class FeaturedTextUiElementType extends AbstractType
 {
     /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)

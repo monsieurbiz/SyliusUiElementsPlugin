@@ -71,4 +71,7 @@ monsieurbiz_ui_elements:
                 badges: "Badges"
         intro_ui_element:
             title: "Lame Intro"
-            description: "Texte d'introduction mis en avant"
+            description: "Texte d'introduction mis en avant avec un texte plus grand"
+        featured_text_ui_element:
+            title: "Lame texte mis en avant"
+            description: "Un texte mis en avant avec trait à gauche et un texte plus grand"

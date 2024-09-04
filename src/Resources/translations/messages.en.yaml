@@ -72,3 +72,6 @@ monsieurbiz_ui_elements:
         intro_ui_element:
             title: "Intro Element"
             description: "Introduction highlighted text"
+        featured_text_ui_element:
+            title: "Featured Text Element"
+            description: "Highlighted text with left stroke and larger text"
