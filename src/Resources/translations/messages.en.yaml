@@ -85,3 +85,11 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Add thematic"
                 delete_element: "Delete thematic"
+        accordion_ui_element:
+            title: "Accordion Element"
+            description: "Title with elements in accordion"
+            fields:
+                elements: "Elements"
+            buttons:
+                add_element: "Add element"
+                delete_element: "Delete element"

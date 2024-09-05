@@ -85,3 +85,11 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Ajouter une thématique"
                 delete_element: "Supprimer une thématique"
+        accordion_ui_element:
+            title: "Lame accordéon"
+            description: "Titre avec des éléments déroulants"
+            fields:
+                elements: "Éléments"
+            buttons:
+                add_element: "Ajouter un élément"
+                delete_element: "Supprimer un élément"

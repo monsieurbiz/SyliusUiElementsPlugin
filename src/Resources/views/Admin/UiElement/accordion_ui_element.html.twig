@@ -1,0 +1,29 @@
+{#
+UI Element template
+type: accordion_ui_element
+element fields:
+    - title
+    - elements
+        - title
+        - description
+#}
+
+<div class="ui container">
+    {% if element.title|default('') is not empty %}
+        <h2>{{ element.title }}</h2>
+    {% endif %}
+
+    <div class="ui styled fluid accordion">
+        {% for accordionElement in element.elements|default([]) %}
+            <div class="title">
+                <i class="dropdown icon"></i>
+                {{ accordionElement.title|default('') }}
+            </div>
+            <div class="content">
+                {{ accordionElement.description|default('')|raw }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="ui divider hidden"></div>
+
