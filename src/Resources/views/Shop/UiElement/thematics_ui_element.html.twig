@@ -1,0 +1,45 @@
+{#
+UI Element template
+type: thematics_ui_element
+element fields:
+    - description
+    - thematics
+        - title
+        - description
+#}
+{% set thematics = element.thematics|default([]) %}
+{% set elementsNumber = element.description|default('') is not empty ? (thematics|length + 1) : (thematics|length) %}
+
+{% set columns = 'four' %}
+{% if elementsNumber == 3 %}
+    {% set columns = 'three' %}
+{% endif %}
+{% if elementsNumber == 2 %}
+    {% set columns = 'two' %}
+{% endif %}
+{% if elementsNumber == 1 %}
+    {% set columns = 'one' %}
+{% endif %}
+
+<div class="ui container segment secondary" style="padding: 20px;">
+    <div class="ui stackable {{ columns }} column grid">
+        {% if element.description|default('') is not empty %}
+            <div class="column">
+                <p style="font-size: 20px; font-weight: bold;">{{ element.description }}</p>
+            </div>
+        {% endif %}
+
+        {% for thematic in element.thematics|default([]) %}
+            <div class="column">
+                {% if thematic.title|default('') is not empty %}
+                    <h4>{{ thematic.title }}</h4>
+                {% endif %}
+                {% if thematic.description|default('') is not empty %}
+                    {{ thematic.description|raw }}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="ui divider hidden"></div>
+

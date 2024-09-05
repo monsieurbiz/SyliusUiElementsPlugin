@@ -77,3 +77,11 @@ monsieurbiz_ui_elements:
         framed_text_ui_element:
             title: "Framed Text Element"
             description: "Text displayed in a frame"
+        thematics_ui_element:
+            title: "Thematics Element"
+            description: "Highlighting thematics with a description"
+            fields:
+                thematics: "Thematics"
+            buttons:
+                add_element: "Add thematic"
+                delete_element: "Delete thematic"

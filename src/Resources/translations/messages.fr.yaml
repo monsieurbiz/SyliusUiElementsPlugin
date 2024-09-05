@@ -77,3 +77,11 @@ monsieurbiz_ui_elements:
         framed_text_ui_element:
             title: "Lame texte encadré"
             description: "Un texte affiché dans un encadré"
+        thematics_ui_element:
+            title: "Lame thématiques"
+            description: "Mise en avant de thématiques avec une description"
+            fields:
+                thematics: "Thématiques"
+            buttons:
+                add_element: "Ajouter une thématique"
+                delete_element: "Supprimer une thématique"
