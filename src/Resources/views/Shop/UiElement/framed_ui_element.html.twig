@@ -1,0 +1,15 @@
+{#
+UI Element template
+type: framed_ui_element
+element fields:
+    - content
+    - background
+#}
+{% set isDark = element.background == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\UiElement\\FramedUiElementType::BACKGROUND_DARK') %}
+<div class="ui segment {% if isDark %} inverted{% endif %}" style="padding: 30px">
+    {% set content = monsieurbiz_richeditor_get_elements(element.content) %}
+    {% for element in content %}
+           {{ element | monsieurbiz_richeditor_render_element }}
+    {% endfor %}
+</div>
+<div class="ui divider hidden"></div>

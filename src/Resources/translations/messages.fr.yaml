@@ -74,9 +74,9 @@ monsieurbiz_ui_elements:
         featured_text_ui_element:
             title: "Lame texte mis en avant"
             description: "Un texte mis en avant avec trait à gauche et un texte plus grand"
-        framed_text_ui_element:
-            title: "Lame texte encadré"
-            description: "Un texte affiché dans un encadré"
+        framed_ui_element:
+            title: "Lame encadré"
+            description: "Un contenu riche affiché dans un encadré"
         thematics_ui_element:
             title: "Lame thématiques"
             description: "Mise en avant de thématiques avec une description"

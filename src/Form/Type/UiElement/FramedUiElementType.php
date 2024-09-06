@@ -13,26 +13,25 @@ namespace MonsieurBiz\SyliusUiElementsPlugin\Form\Type\UiElement;
 
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\AsUiElement;
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\TemplatesUiElement;
-use MonsieurBiz\SyliusRichEditorPlugin\Form\Type\WysiwygType;
-use MonsieurBiz\SyliusRichEditorPlugin\WysiwygEditor\EditorInterface;
+use MonsieurBiz\SyliusRichEditorPlugin\Form\Type\RichEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[AsUiElement(
-    code: 'monsieurbiz_ui_elements.framed_text_ui_element',
-    icon: 'font',
-    title: 'monsieurbiz_ui_elements.ui_element.framed_text_ui_element.title',
-    description: 'monsieurbiz_ui_elements.ui_element.framed_text_ui_element.description',
+    code: 'monsieurbiz_ui_elements.framed_ui_element',
+    icon: 'list alternate outline',
+    title: 'monsieurbiz_ui_elements.ui_element.framed_ui_element.title',
+    description: 'monsieurbiz_ui_elements.ui_element.framed_ui_element.description',
     templates: new TemplatesUiElement(
-        adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/framed_text_ui_element.html.twig',
-        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/framed_text_ui_element.html.twig',
+        adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/framed_ui_element.html.twig',
+        frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/framed_ui_element.html.twig',
     ),
     tags: [],
     wireframe: 'framed-text',
 )]
-class FramedTextUiElementType extends AbstractType
+class FramedUiElementType extends AbstractType
 {
     public const BACKGROUND_LIGHT = 'light';
 
@@ -44,10 +43,9 @@ class FramedTextUiElementType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('content', WysiwygType::class, [
+            ->add('content', RichEditorType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.content',
                 'required' => true,
-                'editor_toolbar_type' => EditorInterface::TOOLBAR_TYPE_MINIMAL,
                 'constraints' => [
                     new Assert\NotBlank(),
                 ],
