@@ -29,7 +29,7 @@ use Symfony\Component\Validator\Constraints as Assert;
         frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/framed_ui_element.html.twig',
     ),
     tags: [],
-    wireframe: 'framed-text',
+    wireframe: 'framed',
 )]
 class FramedUiElementType extends AbstractType
 {
