@@ -2,13 +2,13 @@ liip_imagine:
     filter_sets:
         monsieurbiz_sylius_ui_elements_logos:
             filters:
-                thumbnail: { size: [600, 600], mode: inset }
-                relative_resize: { widen: 300 }
+                thumbnail: { size: [800, 800], mode: inset }
+                relative_resize: { widen: 400 }
         monsieurbiz_sylius_ui_elements_text_with_image:
             filters:
-                thumbnail: { size: [800, 800], mode: inset }
+                thumbnail: { size: [1200, 1200], mode: inset }
                 relative_resize: { widen: 600 }
         monsieurbiz_sylius_ui_elements_badges:
             filters:
-                thumbnail: { size: [600, 600], mode: inset }
-                relative_resize: { widen: 300 }
+                thumbnail: { size: [800, 800], mode: inset }
+                relative_resize: { widen: 400 }
