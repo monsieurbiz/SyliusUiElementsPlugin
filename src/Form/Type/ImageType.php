@@ -25,6 +25,7 @@ class ImageType extends AbstractType
     {
         if (!$options['with_link']) {
             $builder->remove('link');
+            $builder->remove('link_type');
         }
         if (!$options['with_alignment']) {
             $builder->remove('align');
