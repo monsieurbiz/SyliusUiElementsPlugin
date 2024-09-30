@@ -6,6 +6,8 @@ element fields:
     - logos
         - image
         - alt
+        - link
+        - link_type
 #}
 
 <div>
@@ -16,7 +18,14 @@ element fields:
     <div class="ui grid">
         {% for logo in element.logos %}
             <div class="four wide column">
-                <img src="{{ logo.image|imagine_filter('monsieurbiz_sylius_ui_elements_logos') }}" alt="{{ logo.alt|default('') }}" width="180">
+                {% if logo.link|default('') %}
+                    {% set linkIsBlank = logo.link_type is defined and logo.link_type == constant('MonsieurBiz\\SyliusRichEditorPlugin\\Form\\Type\\LinkTypeType::TYPE_EXTERNAL') %}
+                    <a href="{{ logo.link }}"{% if linkIsBlank %} target="_blank" rel="noopener noreferrer"{% endif %}>
+                        <img src="{{ logo.image|imagine_filter('monsieurbiz_sylius_ui_elements_logos') }}" alt="{{ logo.alt|default('') }}" width="180">
+                    </a>
+                {% else %}
+                    <img src="{{ logo.image|imagine_filter('monsieurbiz_sylius_ui_elements_logos') }}" alt="{{ logo.alt|default('') }}" width="180">
+                {% endif %}
             </div>
         {% endfor %}
     </div>

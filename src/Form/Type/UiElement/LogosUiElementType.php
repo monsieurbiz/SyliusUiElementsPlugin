@@ -54,6 +54,9 @@ class LogosUiElementType extends AbstractType
                 'attr' => [
                     'class' => 'ui segment secondary collection--flex',
                 ],
+                'entry_options' => [
+                    'with_link' => true,
+                ],
             ])
         ;
     }
