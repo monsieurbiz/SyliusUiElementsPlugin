@@ -1,0 +1,30 @@
+{#
+UI Element template
+type: job_offer_ui_element
+element fields:
+    - display
+    - title
+    - contract
+    - localisation
+    - content
+    - url
+#}
+<div class="ui segment">
+    {% if element.display == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\UiElement\\JobOfferUiElementType::DISPLAY_SYNTHESIS') %}
+        <div>
+            <h2>{{ element.title|default('') }}</h2>
+            <div><i class="icon edit outline"></i>{{ element.contract|default('') }}</div>
+            <div><i class="icon map marker alternate"></i>{{ element.localisation|default('') }}</div>
+            <a href="{{ element.url }}">{{ element.url }}</a>
+        </div>
+    {% elseif element.display == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\UiElement\\JobOfferUiElementType::DISPLAY_COMPLETE') %}
+        <div>
+            <h2>{{ element.title|default('') }}</h2>
+            <div><i class="icon edit outline"></i>{{ element.contract|default('') }}</div>
+            <div><i class="icon map marker alternate"></i>{{ element.localisation|default('') }}</div>
+            <div class="content">
+                {{ element.content|default('')|raw }}
+            </div>
+        </div>
+    {% endif %}
+</div>
