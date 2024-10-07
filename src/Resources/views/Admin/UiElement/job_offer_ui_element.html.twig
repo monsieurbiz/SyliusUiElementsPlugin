@@ -11,32 +11,32 @@ element fields:
 #}
 <div class="ui segment">
     {% if element.display == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\UiElement\\JobOfferUiElementType::DISPLAY_SYNTHESIS') %}
-        <div>
+        <a href="{{ element.url|default('#') }}" target="_blank" rel="noopener noreferrer">
             {% if element.title|default('') is not empty %}
                 <h2>{{ element.title }}</h2>
             {% endif %}
-            {% if element.contract|default('') is not empty %}
-                <div><i class="icon edit outline"></i>{{ element.contract }}</div>
-            {% endif %}
-            {% if element.localisation|default('') is not empty %}
-            <div><i class="icon map marker alternate"></i>{{ element.localisation }}</div>
-            {% endif %}
-            {% if element.url|default('') is not empty %}
-                <a href="{{ element.url }}">{{ element.url }}</a>
-            {% endif %}
-        </div>
+            <div class="ui stackable grid">
+                {% if element.contract|default('') is not empty %}
+                    <div class="column"><i class="icon edit outline"></i>{{ element.contract }}</div>
+                {% endif %}
+                {% if element.localisation|default('') is not empty %}
+                    <div class="column"><i class="icon map marker alternate"></i>{{ element.localisation }}</div>
+                {% endif %}
+            </div>
+        </a>
     {% elseif element.display == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\UiElement\\JobOfferUiElementType::DISPLAY_COMPLETE') %}
         <div>
             {% if element.title|default('') is not empty %}
                 <h2>{{ element.title }}</h2>
             {% endif %}
-            {% if element.contract|default('') is not empty %}
-                <div><i class="icon edit outline"></i>{{ element.contract }}</div>
-            {% endif %}
-            {% if element.localisation|default('') is not empty %}
-                <div><i class="icon map marker alternate"></i>{{ element.localisation }}</div>
-            {% endif %}
-
+            <div class="ui stackable grid">
+                {% if element.contract|default('') is not empty %}
+                    <div class="column"><i class="icon edit outline"></i>{{ element.contract }}</div>
+                {% endif %}
+                {% if element.localisation|default('') is not empty %}
+                    <div class="column"><i class="icon map marker alternate"></i>{{ element.localisation }}</div>
+                {% endif %}
+            </div>
             {% if element.content|default('') %}
                 <div class="content">
                     {{ element.content|raw }}
