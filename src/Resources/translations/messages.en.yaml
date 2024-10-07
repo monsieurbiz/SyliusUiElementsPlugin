@@ -95,6 +95,7 @@ monsieurbiz_ui_elements:
                 delete_element: "Delete element"
         job_offer_ui_element:
             title: "Job offer Element"
+            description: "Job offer with display in synthesis or complete"
             choices:
                 display:
                     synthesis: "Synthesis"

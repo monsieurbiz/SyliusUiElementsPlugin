@@ -52,7 +52,7 @@ final class JobOfferUiElementType extends AbstractType
                 ],
                 'choices' => [
                     'monsieurbiz_ui_elements.ui_element.job_offer_ui_element.choices.display.synthesis' => self::DISPLAY_SYNTHESIS,
-                    'monsieurbiz_ui_elements.ui_element.job_offer_ui_element.fields.display.complete' => self::DISPLAY_COMPLETE,
+                    'monsieurbiz_ui_elements.ui_element.job_offer_ui_element.choices.display.complete' => self::DISPLAY_COMPLETE,
                 ],
             ])
             ->add('title', TextType::class, [
