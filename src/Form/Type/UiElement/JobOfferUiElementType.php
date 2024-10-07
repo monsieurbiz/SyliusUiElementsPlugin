@@ -30,7 +30,7 @@ use Symfony\Component\Validator\Constraints as Assert;
         adminRender: '@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/job_offer_ui_element.html.twig',
         frontRender: '@MonsieurBizSyliusUiElementsPlugin/Shop/UiElement/job_offer_ui_element.html.twig',
     ),
-    wireframe: '',
+    wireframe: 'job-offer',
 )]
 final class JobOfferUiElementType extends AbstractType
 {
