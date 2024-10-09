@@ -93,3 +93,16 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Ajouter un élément"
                 delete_element: "Supprimer un élément"
+        job_offer_ui_element:
+            title: "Lame offre d'emploi"
+            description: "Affichage d'une offre d'emploi symntéthique ou complète"
+            choices:
+                display:
+                    synthesis: "Synthèse"
+                    complete: "Complète"
+            fields:
+                display: "Affichage"
+                contract: "Contrat"
+                localisation: "Localisation"
+                content: "Contenu"
+                url: "Lien"

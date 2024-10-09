@@ -93,3 +93,16 @@ monsieurbiz_ui_elements:
             buttons:
                 add_element: "Add element"
                 delete_element: "Delete element"
+        job_offer_ui_element:
+            title: "Job offer Element"
+            description: "Job offer with display in synthesis or complete"
+            choices:
+                display:
+                    synthesis: "Synthesis"
+                    complete: "Complete"
+            fields:
+                display: "Display"
+                contract: "Contract"
+                localisation: "Localisation"
+                content: "Content"
+                url: "Link"
