@@ -24,7 +24,7 @@ composer config --no-plugins --json extra.symfony.endpoint '["https://api.github
 ```
 
 ```bash
-composer require monsieurbiz/sylius-rich-editor-plugin
+composer require monsieurbiz/sylius-ui-elements-plugin
 ```
 
 Et voilà! 🎉
