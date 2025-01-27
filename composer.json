@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "sylius/sylius": ">=1.12 <1.14",
+        "sylius/sylius": ">=1.12 <2.0",
         "monsieurbiz/sylius-rich-editor-plugin": "^2.8",
         "monsieurbiz/sylius-media-manager-plugin": "^1.1"
     },
@@ -31,21 +31,18 @@
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "phpcs": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix --using-cache=no",
-        "phpstan": "phpstan analyse -c phpstan.neon",
+        "phpstan": "phpstan analyse -c phpstan.neon src/",
         "phpmd": "phpmd --exclude Migrations/* src/ ansi phpmd.xml",
         "phpunit": "phpunit",
         "phpspec": "phpspec run"
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
         "symfony": {
             "docker": false,
-            "endpoint": [
-                "https://api.github.com/repos/monsieurbiz/symfony-recipes/contents/index.json?ref=flex/master",
-                "flex://defaults"
-            ]
-        },
-        "branch-alias": {
-            "dev-master": "0.4-dev"
+            "endpoint": ["https://api.github.com/repos/monsieurbiz/symfony-recipes/contents/index.json?ref=flex/master", "flex://defaults"]
         }
     },
     "config": {

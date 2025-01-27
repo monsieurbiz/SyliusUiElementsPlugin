@@ -10,9 +10,11 @@
 declare(strict_types=1);
 
 $header = <<<'HEADER'
-This file is part of Monsieur Biz's SyliusUiElementsPlugin for Sylius.
+This file is part of Monsieur Biz' Ui Elements plugin for Sylius.
+
 (c) Monsieur Biz <sylius@monsieurbiz.com>
-For the full copyright and license information, please view the LICENSE
+
+For the full copyright and license information, please view the LICENSE.txt
 file that was distributed with this source code.
 HEADER;
 
@@ -258,10 +260,8 @@ $config
             ],
         ],
         'void_return' => true,
-        'whitespace_after_comma_in_array' => true, // already in symfony set
+        'whitespace_after_comma_in_array' => true, // alerady in symfony set
     ])
-    ->setParallelConfig(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect())
-    ->setRiskyAllowed(true)
     ->setFinder($finder)
 ;
 
