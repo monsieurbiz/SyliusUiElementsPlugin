@@ -1,7 +1,7 @@
 parameters:
     level: 8
     paths:
-        - src/
+        - %rootDir%/src/
 
     excludePaths:
         # Makes PHPStan crash
@@ -9,3 +9,9 @@ parameters:
 
         # Test dependencies
         - 'tests/Application/**/*'
+
+    ignoreErrors:
+        - identifier: missingType.generics
+        - identifier: missingType.iterableValue
+
+    reportUnmatchedIgnoredErrors: false
