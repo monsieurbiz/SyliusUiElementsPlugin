@@ -18,6 +18,9 @@ monsieurbiz_ui_elements:
             image_alignment: "Image alignment"
             image_with_text: "Image with the text"
             logos: "Logos"
+            mobile_image: "Mobile image"
+            button_label: "Button label"
+            button_url: "Button URL"
         form_choices:
             background:
                 light: "Light"
@@ -106,3 +109,7 @@ monsieurbiz_ui_elements:
                 localisation: "Localisation"
                 content: "Content"
                 url: "Link"
+    ui:
+        no_image: "No image"
+        button: "Button"
+        empty: "Empty"

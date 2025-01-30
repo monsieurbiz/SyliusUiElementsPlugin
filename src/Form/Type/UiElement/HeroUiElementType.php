@@ -13,12 +13,14 @@ declare(strict_types=1);
 
 namespace MonsieurBiz\SyliusUiElementsPlugin\Form\Type\UiElement;
 
+use MonsieurBiz\SyliusMediaManagerPlugin\Form\Type\ImageType;
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\AsUiElement;
 use MonsieurBiz\SyliusRichEditorPlugin\Attribute\TemplatesUiElement;
 use MonsieurBiz\SyliusRichEditorPlugin\Form\Type\WysiwygType;
 use MonsieurBiz\SyliusRichEditorPlugin\WysiwygEditor\EditorInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 #[AsUiElement(
@@ -57,6 +59,22 @@ class HeroUiElementType extends AbstractType
             ])
             ->add('description', TextType::class, [
                 'label' => 'monsieurbiz_ui_elements.common.fields.description',
+                'required' => false,
+            ])
+            ->add('image', ImageType::class, [
+                'label' => 'monsieurbiz_ui_elements.common.fields.image',
+                'required' => false,
+            ])
+            ->add('mobileImage', ImageType::class, [
+                'label' => 'monsieurbiz_ui_elements.common.fields.mobile_image',
+                'required' => false,
+            ])
+            ->add('buttonLabel', TextType::class, [
+                'label' => 'monsieurbiz_ui_elements.common.fields.button_label',
+                'required' => false,
+            ])
+            ->add('buttonUrl', UrlType::class, [
+                'label' => 'monsieurbiz_ui_elements.common.fields.button_url',
                 'required' => false,
             ])
         ;
