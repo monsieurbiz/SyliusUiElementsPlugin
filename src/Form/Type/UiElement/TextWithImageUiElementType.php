@@ -68,6 +68,24 @@ class TextWithImageUiElementType extends AbstractType
                     new Assert\NotBlank(),
                 ],
             ])
+            ->add('firstColumnWidth', ChoiceType::class, [
+                'label' => 'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.fields.first_column_width',
+                'required' => true,
+                'constraints' => [
+                    new Assert\NotBlank([]),
+                ],
+                'choices' => [
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.choices.first_column_width.width_1_5' => '1/5',
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.choices.first_column_width.width_1_4' => '1/4',
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.choices.first_column_width.width_1_3' => '1/3',
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.choices.first_column_width.width_2_5' => '2/5',
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.choices.first_column_width.width_1_2' => '1/2',
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.choices.first_column_width.width_3_5' => '3/5',
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.choices.first_column_width.width_2_3' => '2/3',
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.choices.first_column_width.width_3_4' => '3/4',
+                    'monsieurbiz_ui_elements.ui_element.text_with_image_ui_element.choices.first_column_width.width_4_5' => '4/5',
+                ],
+            ])
         ;
     }
 }
