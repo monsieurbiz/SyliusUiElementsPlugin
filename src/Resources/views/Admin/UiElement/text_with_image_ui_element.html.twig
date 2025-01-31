@@ -7,18 +7,38 @@ element fields:
         - image
         - alt
     - imageAlign
+    - firstColumnWidth
 #}
 {% set isRightAlign = (element.imageAlign|default('')) == constant('MonsieurBiz\\SyliusUiElementsPlugin\\Form\\Type\\UiElement\\TextWithImageUiElementType::IMAGE_POSITION_RIGHT') %}
-<div class="ui container">
-    {% if element.image|default(null) is not empty and element.image.image|default('') is not empty %}
-        <img 
-            src="{{ element.image.image|imagine_filter('monsieurbiz_sylius_ui_elements_text_with_image') }}" 
-            alt="{{ element.image.alt|default('') }}" 
-            class="ui image {{ isRightAlign ? 'right' : 'left' }} floated"
-            {% if isRightAlign %}style="margin-left: 10px; margin-bottom: 10px;"{% endif %}
-            {% if not isRightAlign %}style="margin-right: 10px; margin-bottom: 10px;"{% endif %}
-        >
-    {% endif %}
-    {{ element.content|default('')|raw }}
+{% set firstColumnWidth = element.firstColumnWidth|default('1/2') %}
+{# Define all possible class combinations explicitly for medium screens #}
+{% set columnSizes = {
+    '1/5': {'first': 20, 'second': 80},
+    '1/4': {'first': 25, 'second': 75},
+    '1/3': {'first': 33, 'second': 67},
+    '2/5': {'first': 40, 'second': 60},
+    '1/2': {'first': 50, 'second': 50},
+    '3/5': {'first': 60, 'second': 40},
+    '2/3': {'first': 67, 'second': 33},
+    '3/4': {'first': 75, 'second': 25},
+    '4/5': {'first': 80, 'second': 20}
+} %}
+{# Retrieve the classes for the given first column width #}
+{% set selectedClasses = columnSizes[firstColumnWidth]|default({'first': 50, 'second': 50}) %}
+<div class="ui grid">
+    <div class="column" style="width: {{ selectedClasses.first }}%;border: 2px dashed rgba(34,36,38,0.38); padding: 10px; position: relative;">
+        {% if isRightAlign %}
+            {{ include('@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/TextWithImageUiElement/_content.html.twig') }}
+        {% else %}
+            {{ include('@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/TextWithImageUiElement/_image.html.twig') }}
+        {% endif %}
+    </div>
+    <div class="column" style="width: {{ selectedClasses.second }}%;border: 2px dashed rgba(34,36,38,0.38); padding: 10px; position: relative;">
+        {% if isRightAlign %}
+            {{ include('@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/TextWithImageUiElement/_image.html.twig') }}
+        {% else %}
+            {{ include('@MonsieurBizSyliusUiElementsPlugin/Admin/UiElement/TextWithImageUiElement/_content.html.twig') }}
+        {% endif %}
+    </div>
 </div>
 <div class="ui divider hidden"></div>

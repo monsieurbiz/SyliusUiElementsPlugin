@@ -4,6 +4,10 @@ type: hero_ui_element
 element fields:
     - title
     - description
+    - image
+    - mobileImage
+    - buttonLabel
+    - buttonUrl
 #}
 
 <div>
@@ -13,5 +17,38 @@ element fields:
     {% if element.description|default('') is not empty %}
         <div>{{ element.description }}</div>
     {% endif %}
+</div>
+<div class="ui segment">
+    <h3>
+        {{ 'monsieurbiz_ui_elements.common.fields.image'|trans }}
+    </h3>
+    <div>
+        {% if element.image|default('') is not empty %}
+            <img src="{{ element.image|imagine_filter('monsieurbiz_sylius_ui_elements_hero') }}" alt="" />
+        {% else %}
+            {{ 'monsieurbiz_ui_elements.ui.no_image'|trans }}
+        {% endif %}
+    </div>
+</div>
+<div class="ui segment">
+    <h3>
+        {{ 'monsieurbiz_ui_elements.common.fields.mobile_image'|trans }}
+    </h3>
+    <div>
+        {% if element.mobileImage|default('') is not empty %}
+            <img src="{{ element.mobileImage|imagine_filter('monsieurbiz_sylius_ui_elements_hero') }}" alt="" />
+        {% else %}
+            {{ 'monsieurbiz_ui_elements.ui.no_image'|trans }}
+        {% endif %}
+    </div>
+</div>
+<div class="ui segment">
+    <h3>
+        {{ 'monsieurbiz_ui_elements.ui.button'|trans }}
+    </h3>
+    <div>
+        {{ 'monsieurbiz_ui_elements.common.fields.button_label'|trans }}: {{ element.buttonLabel|default('monsieurbiz_ui_elements.ui.empty'|trans) }}<br>
+        {{ 'monsieurbiz_ui_elements.common.fields.button_url'|trans }}: {{ element.buttonUrl|default('monsieurbiz_ui_elements.ui.empty'|trans) }}
+    </div>
 </div>
 <div class="ui divider hidden"></div>

@@ -1,0 +1,7 @@
+{% if element.image|default(null) is not empty and element.image.image|default('') is not empty %}
+    <img
+        src="{{ element.image.image|imagine_filter('monsieurbiz_sylius_ui_elements_text_with_image') }}"
+        alt="{{ element.image.alt|default('') }}"
+        class="ui image"
+    >
+{% endif %}

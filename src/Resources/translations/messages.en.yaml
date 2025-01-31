@@ -18,6 +18,9 @@ monsieurbiz_ui_elements:
             image_alignment: "Image alignment"
             image_with_text: "Image with the text"
             logos: "Logos"
+            mobile_image: "Mobile image"
+            button_label: "Button label"
+            button_url: "Button URL"
         form_choices:
             background:
                 light: "Light"
@@ -57,6 +60,18 @@ monsieurbiz_ui_elements:
                     choices:
                         left: "Left"
                         right: "Right"
+                first_column_width: "First column width"
+            choices:
+                first_column_width:
+                    width_1_5: '1/5 (20%)'
+                    width_1_4: '1/4 (25%)'
+                    width_1_3: '1/3 (33%)'
+                    width_1_2: '1/2 (50%)'
+                    width_2_3: '2/3 (66%)'
+                    width_2_5: '2/5 (40%)'
+                    width_3_4: '3/4 (75%)'
+                    width_3_5: '3/5 (60%)'
+                    width_4_5: '4/5 (80%)'
         logos_ui_element:
             title: "Logos Element"
             description: "Collection of logos"
@@ -106,3 +121,7 @@ monsieurbiz_ui_elements:
                 localisation: "Localisation"
                 content: "Content"
                 url: "Link"
+    ui:
+        no_image: "No image"
+        button: "Button"
+        empty: "Empty"
